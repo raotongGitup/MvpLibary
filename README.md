@@ -18,7 +18,7 @@ mvp的应用方式：
 	}
 
 具体实现方式：
- 协议类（自己根据项目自定义）：
+#  协议类（自己根据项目自定义）：
  public class ViewContract {
  
 public interface View  extends BaseView{
@@ -42,7 +42,8 @@ public interface Moudle {
         Object getData();
 	
  }
-moudle的使用：
+# moudle的使用：
+
 public class UseInfoMoudle extends BaseMoudle implements ViewContract.Moudle {
 
     @Override
@@ -54,7 +55,8 @@ public class UseInfoMoudle extends BaseMoudle implements ViewContract.Moudle {
     }
     
 }
-presenter使用：
+# presenter使用（moudle,个view不用再创建了）：
+
 public class UserInfoPresenetr extends BasePresenter<ViewContract.View, UseInfoMoudle> implements ViewContract.Pressenter {
      @Override
      
@@ -66,7 +68,7 @@ public class UserInfoPresenetr extends BasePresenter<ViewContract.View, UseInfoM
         getView()//直接调用view()（不用在创建)）
        
     }
-    view的使用（mpresenetr不用再去创建）（：
+ # view的使用（mpresenetr不用再去创建）（：
     public class MainActivity extends AppCompatActivity {
     
     @InjectPresenter
