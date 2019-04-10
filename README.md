@@ -57,7 +57,7 @@ public class UseInfoMoudle extends BaseMoudle implements ViewContract.Moudle {
     }
     
 }
-# presenter使用（moudle,个view不用再创建了）：
+# presenter使用（moudle）：
 
 
 public class UserInfoPresenetr extends BasePresenter<ViewContract.View, UseInfoMoudle> implements ViewContract.Pressenter {
